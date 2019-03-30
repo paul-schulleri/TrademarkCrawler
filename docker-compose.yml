@@ -1,0 +1,10 @@
+gamocrawler:
+  image:  gamomat/gamocrawler:latest
+  container_name: gamocrawler
+  ports:
+    - "3000:3000"
+  environment:
+    VIRTUAL_HOST: crawler.rmg-services.gamomat.com
+    VIRTUAL_PORT: 8081
+  volumes:
+    - "./src/app:/src/app"
